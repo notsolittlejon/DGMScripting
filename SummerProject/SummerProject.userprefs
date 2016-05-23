@@ -1,14 +1,9 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Vars2.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Syntax.cs">
     <Files>
-<<<<<<< Updated upstream
-      <File FileName="Assets\Vars2.cs" Line="97" Column="50" />
-      <File FileName="Assets\Vars.cs" Line="1" Column="1" />
-=======
-      <File FileName="Assets\Vars2.cs" Line="47" Column="3" />
-      <File FileName="Assets\Vars.cs" Line="9" Column="25" />
->>>>>>> Stashed changes
+      <File FileName="Assets\Vars2.cs" Line="112" Column="1" />
+      <File FileName="Assets\Syntax.cs" Line="7" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
