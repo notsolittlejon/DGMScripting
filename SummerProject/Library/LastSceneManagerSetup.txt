@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/variables.unity
+- path: Assets/IfStatementScene.unity
   isLoaded: 1
   isActive: 1
