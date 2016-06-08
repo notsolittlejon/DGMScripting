@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Branch1.cs" />
+     <Compile Include="Assets\Conditionals\AnthonysFunction.cs" />
      <Compile Include="Assets\Conditionals\IfStatements.cs" />
      <Compile Include="Assets\Syntax.cs" />
      <Compile Include="Assets\Vars.cs" />
