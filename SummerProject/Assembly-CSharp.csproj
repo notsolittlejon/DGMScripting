@@ -45,12 +45,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Branch1.cs" />
      <Compile Include="Assets\Conditionals\AnthonysFunction.cs" />
      <Compile Include="Assets\Conditionals\IfStatements.cs" />
-     <Compile Include="Assets\Syntax.cs" />
-     <Compile Include="Assets\Vars.cs" />
-     <Compile Include="Assets\Vars2.cs" />
+     <Compile Include="Assets\Loops\Inheritance.cs" />
+     <Compile Include="Assets\Loops\Inheritance2.cs" />
+     <Compile Include="Assets\Loops\Loops.cs" />
+     <Compile Include="Assets\Variables &amp; Syntax\Branch1.cs" />
+     <Compile Include="Assets\Variables &amp; Syntax\Syntax.cs" />
+     <Compile Include="Assets\Variables &amp; Syntax\Vars.cs" />
+     <Compile Include="Assets\Variables &amp; Syntax\Vars2.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
