@@ -50,6 +50,11 @@
      <Compile Include="Assets\Loops\Inheritance.cs" />
      <Compile Include="Assets\Loops\Inheritance2.cs" />
      <Compile Include="Assets\Loops\Loops.cs" />
+     <Compile Include="Assets\Loops\MoveWhileLoop.cs" />
+     <Compile Include="Assets\Loops\ProgramOne.cs" />
+     <Compile Include="Assets\MIDTERM\Midterm.cs" />
+     <Compile Include="Assets\Scope &amp; Access Modifiers\ScopeAccess.cs" />
+     <Compile Include="Assets\Scope &amp; Access Modifiers\UseFruit.cs" />
      <Compile Include="Assets\Variables &amp; Syntax\Branch1.cs" />
      <Compile Include="Assets\Variables &amp; Syntax\Syntax.cs" />
      <Compile Include="Assets\Variables &amp; Syntax\Vars.cs" />
