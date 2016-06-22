@@ -53,6 +53,10 @@
      <Compile Include="Assets\Loops\MoveWhileLoop.cs" />
      <Compile Include="Assets\Loops\ProgramOne.cs" />
      <Compile Include="Assets\MIDTERM\Midterm.cs" />
+     <Compile Include="Assets\MIDTERM\Midtermpseudocode.cs" />
+     <Compile Include="Assets\MIDTERM\PlayerStats.cs" />
+     <Compile Include="Assets\Scope &amp; Access Modifiers\HeathData.cs" />
+     <Compile Include="Assets\Scope &amp; Access Modifiers\Multiplayer.cs" />
      <Compile Include="Assets\Scope &amp; Access Modifiers\ScopeAccess.cs" />
      <Compile Include="Assets\Scope &amp; Access Modifiers\UseFruit.cs" />
      <Compile Include="Assets\Variables &amp; Syntax\Branch1.cs" />

@@ -11,7 +11,7 @@ Requirements are:
 --One loop must add bonus inventory items
 -Scope and access modifiers
 -Create Power-Ups
--
+
 
 Problem solve the following:
 
@@ -41,27 +41,35 @@ using System.Collections;
 
 public class Midterm : MonoBehaviour
 {
-	
-	public string userName = "Type your name here";
+	/*
 	public float strength = Random.Range(1,10);
 	public int dexterity = Random.Range(1,10);
 	public int intelligence = Random.Range (1,10);
 	public int charm = Random.Range(1,10);
+	*/
+
+	//void OnMouseDown --> Continue?
 
 	void StoryIntro ()
 	{
-		string part1 = "Welcome to this revolutionary text-based adventure. If you haven't done so yet, please input your name in the UserName field, so we can begin.";
+		string part1 = "Welcome, Hero! Your adventure begins.";
 		print (part1);
 
 	}
 
 
 
+	void RunProgram()
+	{
+		StoryIntro();
+
+	}
+
 
 	// Use this for initialization
 	void Start ()
 	{
-		StoryIntro ();
+		RunProgram ();
 		//CharacterCreation (strength, dexterity, intelligence, charm);
 
 	
