@@ -1,8 +1,7 @@
 ﻿//pseudocode!
 
 /*
-Beginning of the story! 
-
+ 
 User Data 
 -Name (String)
 -Health
@@ -13,7 +12,9 @@ User Data
 -Defense (Int)
 -Inventory (Array)
 
-Have user input stats, then click to continue? 
+Have user input stats, then click to continue? (Input.anyKeyDown)
+
+Beginning of the story! 
 
 Encounter One (Switch Statement?)
 In the dead of night, were abducted and left down in a deep dungeon. Oh no. 
@@ -65,9 +66,9 @@ fail, lose hp
 if you succeed, 
 -Guard opens the gate and lets you out of the dungeon
 -You run past the guard, open the gate and flee the dungeon
--You defeat the guard and he opens the gate for you
+-You defeat the guard and he opens the gate for you, allowing to flee the dungeon. 
 
-Along the line, if you lose too much hp, you DIE. 
-
+Victory Statement: It is unclear who threw you in this strange dungeon or why, but at least you are free again--for now. 
+Death: As your blurred vision begins to fade, you question who would have thrown you in this accursed dungeon and why. Looks like you'll never know. 
 
 */

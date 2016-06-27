@@ -55,6 +55,7 @@
      <Compile Include="Assets\MIDTERM\Midterm.cs" />
      <Compile Include="Assets\MIDTERM\Midtermpseudocode.cs" />
      <Compile Include="Assets\MIDTERM\PlayerStats.cs" />
+     <Compile Include="Assets\MIDTERM\Weapon.cs" />
      <Compile Include="Assets\Scope &amp; Access Modifiers\HeathData.cs" />
      <Compile Include="Assets\Scope &amp; Access Modifiers\Multiplayer.cs" />
      <Compile Include="Assets\Scope &amp; Access Modifiers\ScopeAccess.cs" />
