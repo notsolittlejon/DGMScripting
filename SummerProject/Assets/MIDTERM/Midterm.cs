@@ -38,142 +38,141 @@ Use SHORT CODE (:/)
 */
 using UnityEngine;
 using System.Collections;
-
-
-
+using System.Collections.Generic;
 public class Midterm : MonoBehaviour
 {
-	
-	/*
-	public float strength = Random.Range(1,10);
-	public int dexterity = Random.Range(1,10);
-	public int intelligence = Random.Range (1,10);
-	public int charm = Random.Range(1,10);
-	*/
-
-	//void OnMouseDown --> Continue?
-	//Click to continue? (Input.anyKeyDown)
-
-	//pseudocode!
-
-	/*
-
-Beginning of the story! 
-
-
-
-
-
------------------------
-
-Encounter Two (Switch Statement?)
-After getting past the troll, you continue in the dungeon and find a locked door.
-You can:
--Pick the lock (Dexterity & Intelligence)
--Break down the door (Strength, check inventory for sword and add +5 to score if it's there)
--Knock and see who is there (Charisma & Intelligence)
-
-If you fail, you lose hp
-(Fail to pick lock, too noisy, guard opens door and it smacks you in the face)
-(Fail to break door, guard swings door open and hits you with it)
-(Knock and fail, the guard opens the door and hits you with it)
-
-If you succeed: 
--Quietly open door, and proceed
--Break the door in, and proceed
-
-------------------------------
-Encounter Three (Switch Statement)
-Get past the guard, and out of the dungeon!
--Talk to the guard (Charisma + Intelligence)
--Run past the guard (Dexterity + strength)
--Fight the guard (Strength, check inventory for sword and add +5 to score if it's there)
-
-if you 
-fail, lose hp
-(fail to charm guard, he attacks you and you have to run. if dexterity is too low, he hits you as you run past)
-(fail to run past him, he hits you as you go by)
-(fail when fighting him, test defense and he does damage if your dexterity is too low)
-
-if you succeed, 
--Guard opens the gate and lets you out of the dungeon
--You run past the guard, open the gate and flee the dungeon
--You defeat the guard and he opens the gate for you, allowing to flee the dungeon. 
-
-Victory Statement: It is unclear who threw you in this strange dungeon or why, but at least you are free again--for now. 
-Death: As your blurred vision begins to fade, you question who would have thrown you in this accursed dungeon and why. Looks like you'll never know. 
-
-*/
+	public int page = 1;
 	public PlayerStats player1;
-	public Weapon[] Inventory;
-	public int StoryOption = 1;
+	Weapon b_greatsword = new Weapon();
+	//public Weapon[] inventory = new Weapon[5];
+	public List<Weapon> inventory = new List<Weapon>();
+	public int trollStrength;
+	//These variables make sure the loops only run once, while allowing for constant input. 
+	private int n1 = 0;
+	private int n2 = 0;
+	private int n3 = 0;
+	private int n4 = 0;
+	private int n5 = 0;
+	//private int n6 = 0;
 
 	void Setup ()
 	{
 		//Randomly picks player initial stats
 		player1.InitializePlayer (Random.Range (1, 10), Random.Range (1, 10), Random.Range (1, 10), Random.Range (1, 10));
+		trollStrength = (Random.Range (4,9));
 	}
-		
-
+	//The Powerup!
+	void FindSword ()
+	{
+		b_greatsword.SpawnWeapon ("Beautiful Greatsword",5, 10);
+		inventory.Add(b_greatsword);
+		//The sword permanently increases your health. Whoo. 
+		player1.WeaponPowerup (b_greatsword.WeaponStrength ());
+		print ("Your sword has increased your Strength by 5, for a total of " + player1.GetStrength ());
+	}
+	void ShowHealth ()
+	{
+		//Health is displayed. 
+		print ("Health: " + player1.health);
+	}
+	void TrollHit ()
+	{
+		//You check your defense against the troll's attack, and take whatever damage your defense doesn't block
+		player1.health -= player1.DefenseChecker (trollStrength);
+		print ("The troll picks you up and deftly throws you.");
+		print ("You manage to scramble away after recovering from the fall.");
+		ShowHealth ();
+	}
+	//Here is where the bulk of the story is to be found. 
 	void Story ()
 	{
-		if (StoryOption == 1) {
-			print ("Welcome, hero!");
-			print ("In the dead of night, you were abducted and left down in a deep dungeon. Oh no.");
-			print ("Click the sphere to continue");
+		if (page == 1) {
+
+			while (n1 < 1) {
+				//Effectively the "Title Page" of our little adventure.
+				print ("Welcome, hero!");
+				print ("In the dead of night, you were abducted and left down in a deep dungeon. Oh no.");
+				print ("Select page 2 to continue.");
+				n1++;
+			}
+		}
+		//Encounter One
+		else if (page == 2) {
+			while (n2 < 1) {
+				print ("---------------------------------------------------------------------------------------------------------------");
+				print ("While trying to find your way out, you encounter a troll. It somehow got a hold of your beautiful greatsword.");
+				print ("To Attack, select page 3.");
+				print ("To Run, select page 4.");
+				print ("To Charm, select page 5.");
+				//If you fail, you lose hp.
+				//If you succeed, you gain 1 item (Greatsword, added to Inventory
+				n2++;
+			}
+			//You decide to attack!
+		} else if (page == 3) {
+			//Loop to only let this happen once. 
+			while (n3 < 1) {
+				print ("You attempt to attack the great troll.");
+				//-Attack (Adds Strength & Defense)
+				//If the attack succeeds...
+				if (player1.AttackSuccss (trollStrength)) {
+					print ("You pick up a rock and chuck it as hard as you can. Direct hit! The troll falls unconcsious.");
+					print ("You take your sword from the monstrous troll, and continue further into the dungeon.");
+					FindSword ();
+					//If the attack fails...
+				} else {
+					print ("You try taking a swing at it, but the troll just stares at you as your blows bounce off its thick skin.");
+					TrollHit ();
+				}
+				n3++;
+			}
+		} else if (page == 4) {
+			//Run (Adds Strength & Dexterity)
+			while (n4 < 1) {
+				print ("You attempt to sprint past the troll, hoping it will be slow enough that it won't be able to reach you.");
+				//If running succeeds...
+				if (player1.RunSuccess (trollStrength)) {
+					print ("You manage to slip past the lumbering creature with ease, snatching your greatsword out of its hands as you go by");
+					FindSword ();
+					//If running fails...
+				} else {
+					print ("You try to run past the lumbering beast, but it manages to get a hold of your arm as you flit past.");
+					TrollHit ();
+				}
+				n4++;
+			}
+		} else if (page == 5) {
+			while (n5 < 1) {
+				print ("You attempt to reason with the great brute. Maybe it's just misunderstood?");
+				//If charming succeeds..
+				if (player1.CharmSuccess (trollStrength)) {
+					print ("Turns out you two have lots in commmon. You even both have an uncle Fred. Crazy!");
+					print ("The Troll explains that it thought you were dead, which is why it took your sword. It gladly returns it to you.");
+					FindSword ();
+					//If charming fails...
+				} else {
+					print ("It is much harder to reason with a troll than you expected. Your efforts seem to be in vain.");
+					TrollHit ();
+				}
+				n5++;
+			}
 		}
 
-		//Encounter One (Switch Statement?)
-		//In the dead of night, were abducted and left down in a deep dungeon. Oh no. 
-		//You encounter a troll, who somehow got a hold of your beautiful greatsword.
-		//You can 
-		//-Attack (Adds Strength & Defense)
-		//-Run (Adds Strength & Dexterity)
-		//-Charm (Adds Charisma and Intelligence)
-
-			else if (StoryOption == 2) {
-			print ("---------------------------------------------------------------------------------------------------------------");
-			print ("While trying to find your way out, you encounter a troll. It somehow got a hold of your beautiful greatsword.");
-			print ("To Attack, set StoryOption to 3.");
-			print ("To Run, set StoryOption to 4.");
-			print ("To Charm, set StoryOption to 5.");
-			//If you fail, you lose hp.
-			//(Attack, troll throws you)
-			//(Run, you don't get away. He smacks you and throws you.)
-			//(Charm, unimpressed, he picks you up and throws you)
-
-				//If you succeed, you gain 1 item (Greatsword, added to Inventory)
-				//(Attack, you hit him and he drops it and runs)
-				//(Run, you steal it and run away)
-				//(Charm, he gives it to you)
-		} else if (StoryOption == 3) {
-			
-		} else if (StoryOption == 4) {
-			
-		} else if (StoryOption == 5) {
-			
-		} else if (StoryOption == 6) {
-			
-		}
-
-
+		//Function for showing what's in the inventory
+		/*
+		else if (page == 6){
+			while (n6 < 1) {
+				foreach(Weapon element in inventory){
+					print (element.WeaponName());}
+				n6++;
+			}
+		}*/
 	}
 
-
-
-
- 	
 
 	void Start ()
 	{
-		
-		
-
-
-
-
-
-	
+		Setup ();
 	}
 
 

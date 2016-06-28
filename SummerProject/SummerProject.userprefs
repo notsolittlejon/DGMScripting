@@ -1,11 +1,11 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MIDTERM\Midterm.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\MIDTERM\PlayerStats.cs">
     <Files>
-      <File FileName="Assets\MIDTERM\Midterm.cs" Line="150" Column="4" />
+      <File FileName="Assets\MIDTERM\Midterm.cs" Line="62" Column="40" />
       <File FileName="Assets\MIDTERM\Midtermpseudocode.cs" Line="74" Column="3" />
-      <File FileName="Assets\MIDTERM\PlayerStats.cs" Line="2" Column="25" />
-      <File FileName="Assets\MIDTERM\Weapon.cs" Line="7" Column="37" />
+      <File FileName="Assets\MIDTERM\PlayerStats.cs" Line="33" Column="4" />
+      <File FileName="Assets\MIDTERM\Weapon.cs" Line="20" Column="15" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
