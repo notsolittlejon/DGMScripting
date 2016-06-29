@@ -39,15 +39,17 @@ Use SHORT CODE (:/)
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+
 public class Midterm : MonoBehaviour
 {
+	//public enum myStory {PAGE_1 , PAGE_2 , PAGE_3 , PAGE_4 , PAGE_5}
 	public int page = 1;
 	public PlayerStats player1;
-	Weapon b_greatsword = new Weapon();
+	Weapon b_greatsword = new Weapon ();
 	//public Weapon[] inventory = new Weapon[5];
-	public List<Weapon> inventory = new List<Weapon>();
+	public List<Weapon> inventory = new List<Weapon> ();
 	public int trollStrength;
-	//These variables make sure the loops only run once, while allowing for constant input. 
+	//These variables make sure the loops only run once, while allowing for constant input.
 	private int n1 = 0;
 	private int n2 = 0;
 	private int n3 = 0;
@@ -55,26 +57,30 @@ public class Midterm : MonoBehaviour
 	private int n5 = 0;
 	//private int n6 = 0;
 
+
+	//This spawns the character and sets the strength of the enemies.
 	void Setup ()
 	{
 		//Randomly picks player initial stats
 		player1.InitializePlayer (Random.Range (1, 10), Random.Range (1, 10), Random.Range (1, 10), Random.Range (1, 10));
-		trollStrength = (Random.Range (4,9));
+		trollStrength = (Random.Range (4, 9));
 	}
-	//The Powerup!
+	//The Powerup! A sword, that when found is added to the inventory. Lovely!
 	void FindSword ()
 	{
-		b_greatsword.SpawnWeapon ("Beautiful Greatsword",5, 10);
-		inventory.Add(b_greatsword);
+		b_greatsword.SpawnWeapon ("Beautiful Greatsword", 5, 10);
+		inventory.Add (b_greatsword);
 		//The sword permanently increases your health. Whoo. 
 		player1.WeaponPowerup (b_greatsword.WeaponStrength ());
 		print ("Your sword has increased your Strength by 5, for a total of " + player1.GetStrength ());
 	}
+
 	void ShowHealth ()
 	{
 		//Health is displayed. 
 		print ("Health: " + player1.health);
 	}
+
 	void TrollHit ()
 	{
 		//You check your defense against the troll's attack, and take whatever damage your defense doesn't block
@@ -83,7 +89,7 @@ public class Midterm : MonoBehaviour
 		print ("You manage to scramble away after recovering from the fall.");
 		ShowHealth ();
 	}
-	//Here is where the bulk of the story is to be found. 
+	//Here is where the bulk of the story is to be found.
 	void Story ()
 	{
 		if (page == 1) {
@@ -112,6 +118,7 @@ public class Midterm : MonoBehaviour
 		} else if (page == 3) {
 			//Loop to only let this happen once. 
 			while (n3 < 1) {
+				print ("---------------------------------------------------------------------------------------------------------------");
 				print ("You attempt to attack the great troll.");
 				//-Attack (Adds Strength & Defense)
 				//If the attack succeeds...
@@ -129,6 +136,7 @@ public class Midterm : MonoBehaviour
 		} else if (page == 4) {
 			//Run (Adds Strength & Dexterity)
 			while (n4 < 1) {
+				print ("---------------------------------------------------------------------------------------------------------------");
 				print ("You attempt to sprint past the troll, hoping it will be slow enough that it won't be able to reach you.");
 				//If running succeeds...
 				if (player1.RunSuccess (trollStrength)) {
@@ -143,6 +151,7 @@ public class Midterm : MonoBehaviour
 			}
 		} else if (page == 5) {
 			while (n5 < 1) {
+				print ("---------------------------------------------------------------------------------------------------------------");
 				print ("You attempt to reason with the great brute. Maybe it's just misunderstood?");
 				//If charming succeeds..
 				if (player1.CharmSuccess (trollStrength)) {
@@ -169,12 +178,14 @@ public class Midterm : MonoBehaviour
 		}*/
 	}
 
+	//public myStory chapterOne;
+
+
 
 	void Start ()
 	{
 		Setup ();
 	}
-
 
 	void Update ()
 	{
