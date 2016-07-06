@@ -47,6 +47,8 @@
   <ItemGroup>
      <Compile Include="Assets\Conditionals\AnthonysFunction.cs" />
      <Compile Include="Assets\Conditionals\IfStatements.cs" />
+     <Compile Include="Assets\Loops\EachLoops.cs" />
+     <Compile Include="Assets\Loops\ForLoops.cs" />
      <Compile Include="Assets\Loops\Inheritance.cs" />
      <Compile Include="Assets\Loops\Inheritance2.cs" />
      <Compile Include="Assets\Loops\Loops.cs" />
