@@ -47,7 +47,6 @@
   <ItemGroup>
      <Compile Include="Assets\Conditionals\AnthonysFunction.cs" />
      <Compile Include="Assets\Conditionals\IfStatements.cs" />
-     <Compile Include="Assets\Loops\EachLoops.cs" />
      <Compile Include="Assets\Loops\ForLoops.cs" />
      <Compile Include="Assets\Loops\Inheritance.cs" />
      <Compile Include="Assets\Loops\Inheritance2.cs" />
@@ -56,6 +55,7 @@
      <Compile Include="Assets\Loops\ProgramOne.cs" />
      <Compile Include="Assets\MIDTERM\Midterm.cs" />
      <Compile Include="Assets\MIDTERM\Midtermpseudocode.cs" />
+     <Compile Include="Assets\MIDTERM\Monster.cs" />
      <Compile Include="Assets\MIDTERM\PlayerStats.cs" />
      <Compile Include="Assets\MIDTERM\Weapon.cs" />
      <Compile Include="Assets\Scope &amp; Access Modifiers\HeathData.cs" />
