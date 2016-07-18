@@ -6,7 +6,7 @@ public class EachLoops : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		foreach (int _score in playerScores) {
-			_score += 10;
+			//_score += 10;
 		}
 	}
 	
