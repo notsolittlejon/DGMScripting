@@ -49,7 +49,10 @@
      <Compile Include="Assets\Conditionals\IfStatements.cs" />
      <Compile Include="Assets\Enums &amp; Switches\Book.cs" />
      <Compile Include="Assets\Enums &amp; Switches\GameController.cs" />
+     <Compile Include="Assets\Enums &amp; Switches\GameStates.cs" />
+     <Compile Include="Assets\Enums &amp; Switches\Loading.cs" />
      <Compile Include="Assets\Enums &amp; Switches\MyEnums.cs" />
+     <Compile Include="Assets\Enums &amp; Switches\StartGame.cs" />
      <Compile Include="Assets\Loops\EachLoops.cs" />
      <Compile Include="Assets\Loops\ForLoops.cs" />
      <Compile Include="Assets\Loops\Inheritance.cs" />
