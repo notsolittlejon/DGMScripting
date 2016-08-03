@@ -1,15 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Tony's Stuff\EnemyAgent.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Final\Final.cs">
     <Files>
-      <File FileName="Assets\Tony's Stuff\EnemyAgent.cs" Line="9" Column="9" />
-      <File FileName="Assets\Loops\EachLoops.cs" Line="9" Column="5" />
-      <File FileName="Assets\Loops\ForLoops.cs" Line="1" Column="1" />
-      <File FileName="Assets\Loops\Loops.cs" Line="1" Column="1" />
-      <File FileName="Assets\MIDTERM\Midterm.cs" Line="1" Column="1" />
-      <File FileName="Assets\MIDTERM\PlayerStats.cs" Line="1" Column="1" />
-      <File FileName="Assets\MIDTERM\Weapon.cs" Line="1" Column="1" />
-      <File FileName="Assets\Tony's Stuff\NewBehaviourScript.cs" Line="31" Column="2" />
+      <File FileName="Assets\Final\Final.cs" Line="30" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
