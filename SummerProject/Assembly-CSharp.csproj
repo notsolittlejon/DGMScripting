@@ -47,12 +47,16 @@
   <ItemGroup>
      <Compile Include="Assets\Conditionals\AnthonysFunction.cs" />
      <Compile Include="Assets\Conditionals\IfStatements.cs" />
+     <Compile Include="Assets\Final\Enemy.cs" />
      <Compile Include="Assets\Final\Final.cs" />
      <Compile Include="Assets\Final\Midterm\Midterm.cs" />
      <Compile Include="Assets\Final\Midterm\Midtermpseudocode.cs" />
      <Compile Include="Assets\Final\Midterm\Monster.cs" />
      <Compile Include="Assets\Final\Midterm\PlayerStats.cs" />
      <Compile Include="Assets\Final\Midterm\Weapon.cs" />
+     <Compile Include="Assets\Final\Player.cs" />
+     <Compile Include="Assets\Final\Powerup.cs" />
+     <Compile Include="Assets\Final\State.cs" />
      <Compile Include="Assets\Loops\EachLoops.cs" />
      <Compile Include="Assets\Loops\ForLoops.cs" />
      <Compile Include="Assets\Loops\Inheritance.cs" />
