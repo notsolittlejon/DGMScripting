@@ -11,7 +11,7 @@ public class Player
 	public int strength;
 	//Dexterity (Int)
 	public int dexterity;
-	public int speed;
+	public float speed;
 	//Charisma (Int)
 	public int charisma;
 	//Intelligence (Int)
@@ -25,7 +25,10 @@ public class Player
 		username = "Our Hero";
 		strength = _s;
 		dexterity = _d;
-		speed = ((_d - _s) * (_d - _s));
+		speed = ((_d - _s) * (_d - _s))*.1f;
+		if (speed < 1) {
+			speed = 1;
+		}
 		charisma = _c;
 		intelligence = _i;
 		if (speed == 0) {
@@ -76,36 +79,4 @@ public class Player
 		strength += wstrength;
 	}
 
-	public int GetStrength(){
-		int i = strength;
-		return i;
-	}
-
-	public int GetDexterity(){
-		int i = dexterity;
-		return i;
-	}
-
-	public int GetSpeed(){
-		int i = speed;
-		return i;
-	}
-
-	public int GetCharisma(){
-		int i = charisma;
-		return i;
-	}
-
-	public int GetIntelligence(){
-		int i = intelligence;
-		return i;
-	}
-
-	public int GetHealth(){
-		int i = health;
-		return i;
-	}
-
-
 }
-

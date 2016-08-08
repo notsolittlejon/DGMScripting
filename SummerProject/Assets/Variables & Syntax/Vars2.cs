@@ -8,19 +8,19 @@ public class Vars2 : MonoBehaviour {
 	//Here are some cute global variables for us to use. 
 
 	//Bread types. Yummy.
-	string bread1 = "white";
-	string bread2 = "wheat";
-	string bread3 = "sourdough";
-	string bread4 = "rye";
+	//string bread1 = "white";
+	//string bread2 = "wheat";
+	//string bread3 = "sourdough";
+	//string bread4 = "rye";
 
 	//Sweetness ratings, the highest possible value being a 1.0
 	float honeySweetness = 0.9f;
-	float jellySweetness = 0.7f;
+	//float jellySweetness = 0.7f;
 	float pbSweetness = 0.3f;
 
 
 	//On a scale from 1-5 (one being worst, 5 being best)
-	int jellyRating = 3;
+	//int jellyRating = 3;
 	int honeyRating = 5;
 	int pbRating = 2;
 
@@ -35,9 +35,9 @@ public class Vars2 : MonoBehaviour {
 	string pbStyle = "Creamy";
 
 	//Colors of ingredients. Maybe a fun if/else statement could be used to mix colors...if I was really bored enough
-	string jellyColor = "Purple";
+	//string jellyColor = "Purple";
 	string honeyColor = "Amber";
-	string pbColor = "Tan";
+	//string pbColor = "Tan";
 
 	//Now, on to the functions! Wheee!
 

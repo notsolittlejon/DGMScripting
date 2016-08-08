@@ -1,6 +1,7 @@
 ﻿public class State{
-	public enum States {Beginning, Attacking, Running, Charming, Ending
+	public enum States {Loading, Beginning, Attacking, Running, Charming, Dying, Ending
 	};
+	public static States gameState = States.Loading;
 
 
 }
