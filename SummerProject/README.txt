@@ -29,9 +29,6 @@ To make your life maybe a bit easier, I tried to explain below how I
 felt that I met (or failed to meet) the project requirements listed
 in Canvas. 
 
-I did make an windows Executable form of my game, though I couldn't make an
-accompanying one for Mac. It's found in the Build folder if you want to try it out
-
 Thanks,
 
 	-Jonathan Hardy
