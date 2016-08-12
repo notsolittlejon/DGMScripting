@@ -17,7 +17,8 @@ public class Player
 	//Intelligence (Int)
 	public int intelligence;
 	//Defense (Int)
-	private int defense = 2;
+	public int defense = 2;
+
 
 	//Initially sets up player.
 	public void InitializePlayer (int _s, int _d, int _c, int _i)
@@ -39,44 +40,50 @@ public class Player
 	//Checks character defense against incoming damage. Damage is negated or reduced, depending on defense level
 	public int DefenseChecker (int damage)
 	{
+		//If the defense is greater than damage dealth, damage is 0
 		if (defense >= damage) {
 			damage = 0;
 			return damage;
-		} else {
+		} 
+		//Otherwise, return the damage minus the defense
+		else {
 			return damage - defense;
 		}
 
 	}
-	//Checks strength & dexterity against monster strength. Returns true if you are strong and fast enough to deal damage
-	public bool AttackSuccss (int monsterStrength)
-	{
-		if ((strength + dexterity) > monsterStrength) {
-			return true; 
-		} else {
-			return false;
-		}
 
-	}
-	public bool RunSuccess (int monsterStrength){
+	public bool RunSuccess (float monsterSpeed){
 		//Create monster speed (Subtract 10 from the strength and then square it. For my intents, this will cause weaker monsters to be faster.
-		int monsterSpeed = (monsterStrength - 10) * (monsterStrength - 10);
+		//int monsterSpeed = (monsterStrength - 10) * (monsterStrength - 10);
 		if ((speed) > monsterSpeed)
 			return true;
 		else
 			return false;
 	}
 
-	public bool CharmSuccess (int monsterStrength){
-		int monsterBrains = monsterStrength * 2;
-		if ((charisma + intelligence) > monsterBrains)
+	public bool CharmSuccess (int monsterBrains, int monsterCharisma){
+		//Checks intelligence and charisma against monster intelligence/charisma
+		if ((charisma + intelligence) > (monsterBrains + monsterCharisma))
 			return true;
 		else
 			return false;
 	}
 
-	//Adds weapon's strength to hero's strength permanently
-	public void WeaponPowerup(int wstrength){
-		strength += wstrength;
+	//powerup for picking up sword
+	public void PickupSword(){
+		//Adds to player strength
+		strength += 5;
 	}
 
+	//powerup for picking up shield
+	public void PickupShield(){
+		//Adds to player defense
+		defense += 5;
+	}
+
+	//powerup for picking up potion
+	public void PickupPotion(){
+		//Adds to player speed
+		speed += 5;
+	}
 }

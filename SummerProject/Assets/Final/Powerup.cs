@@ -1,15 +1,13 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿[System.Serializable]
 
-public class Powerup : MonoBehaviour {
+public class Powerup {
+	public string name;
+	public string ability;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
+
+	public void SpawnPowerup(string _n, string _a){
+		name = _n;
+		ability = _a;
 	
 	}
 }
