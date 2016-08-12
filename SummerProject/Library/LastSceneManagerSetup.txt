@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Conditionals/IfStatementScene.unity
+- path: Assets/Old Stuff/Conditionals/IfStatementScene.unity
   isLoaded: 1
   isActive: 1
